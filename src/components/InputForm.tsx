@@ -7,20 +7,24 @@ const InputForm = () => {
   const [text, setText] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault;
+    e.preventDefault();
     const todo = {
-      id: 1,
       title: text,
       isComplete: false,
     };
 
     dispatch(addTodo(todo));
     console.log(todo);
+    setText("");
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setText(e.target.value);
   };
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <input />
+        <input type="text" value={text} onChange={handleChange} />
         <button>추가</button>
       </form>
     </div>

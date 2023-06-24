@@ -4,7 +4,6 @@ export const DELETE_TODO = "DELETE_TODO";
 let id = 1;
 
 interface TodoType {
-  id: number;
   title: string;
   isComplete: boolean;
 }

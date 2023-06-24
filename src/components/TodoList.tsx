@@ -1,6 +1,8 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 const TodoList = () => {
+  const todos = useSelector((state) => state.TodoReducer.todos);
   return (
     <div>
       <span>제목</span>
