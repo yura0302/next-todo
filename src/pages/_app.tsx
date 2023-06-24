@@ -4,6 +4,7 @@ import rootReducer from "@/store/reducer/main";
 import { AppProps } from "next/app";
 import { createStore } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
+import "../styles/globals.css";
 
 const store = createStore(rootReducer, composeWithDevTools());
 
