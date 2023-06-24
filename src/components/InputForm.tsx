@@ -31,6 +31,7 @@ const InputForm = () => {
           type="text"
           value={text}
           onChange={handleChange}
+          placeholder="Enter Here"
           className=" pl-4 p-3 border-2 border-black flex-1"
         />
         <button className="border-2 border-black px-3 py-2 bg-slate-500 rounded-lg text-white flex-0">

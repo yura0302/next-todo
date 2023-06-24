@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 
 const TodoItem = ({ todo }) => {
   const dispatch = useDispatch();
+
   const handleDelete = () => {
     dispatch(deleteTodo(todo.id));
   };
