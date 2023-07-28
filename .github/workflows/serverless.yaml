@@ -1,7 +1,7 @@
 name: NEXT Deploy
 on:
   push:
-    branches: master
+    branches: main
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -9,7 +9,7 @@ jobs:
       - name: Checkout source code.
         uses: actions/checkout@master
         with:
-          ref: master
+          ref: main
 
       - name: Install Dependencies
         run: |
