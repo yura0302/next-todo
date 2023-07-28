@@ -10,6 +10,12 @@ interface TodoType {
   isComplete: boolean;
 }
 
+interface EditTodoType {
+  id: number;
+  title: string;
+  editTitle: string;
+}
+
 export const addTodo = (todo: TodoType) => {
   return {
     type: ADD_TODO,
@@ -42,6 +48,20 @@ export const isCompleteTodo = (id: number) => {
   };
 };
 
+export const updateTodo = (todo: EditTodoType) => {
+  return {
+    type: UPDATE_TODO,
+    payload: {
+      todo: {
+        id: todo.id,
+        title: todo.editTitle,
+      },
+    },
+  };
+};
+
 export type ActionsType =
   | ReturnType<typeof addTodo>
-  | ReturnType<typeof deleteTodo>;
+  | ReturnType<typeof deleteTodo>
+  | ReturnType<typeof isCompleteTodo>
+  | ReturnType<typeof updateTodo>;
